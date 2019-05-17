@@ -57,15 +57,15 @@ public class Solver {
     private void getArray() {
 
         //solve();
-            int col, row, val;
-            for (int i = 0; i < count_var; i++) {
-                if (solve[i] > 0) {
-                    row = i / 81;
-                    col = (i % 81) / 9;
-                    val = (i % 9) + 1;
-                    array[row][col] = val;
-                }
+        int col, row, val;
+        for (int i = 0; i < count_var; i++) {
+            if (solve[i] > 0) {
+                row = i / 81;
+                col = (i % 81) / 9;
+                val = (i % 9) + 1;
+                array[row][col] = val;
             }
+        }
 
     }
 
@@ -73,10 +73,10 @@ public class Solver {
 
         getArray();
         for (int i = 0; i < 9; i++) {
-          for (int j = 0; j < 9; j++) {
-              System.out.print(array[i][j] + " ");
-          }
-          System.out.println();
+            for (int j = 0; j < 9; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 }
